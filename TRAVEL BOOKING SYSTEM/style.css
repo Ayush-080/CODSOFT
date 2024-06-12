@@ -1,0 +1,351 @@
+* Reset margins and padding for all elements */ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/104826/aircraft-holiday-sun-tourism-104826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #434343;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+header .logo {
+    max-width: 350px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFA500;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    width: max-content;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: slideInDown 0.5s ease-in-out;
+}
+
+.tab-container {
+    background-color: #ff7a7a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+    border-radius: 8px;
+}
+
+.tab-button {
+    color: rgb(4, 4, 4);
+    font-size: 1.1em;
+    padding: 1px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-button img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+}
+
+.tab-button.active {
+    background-color: #ffd153;
+    border-bottom: 3px solid #000000;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tab-button {
+    position: relative;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #ffd153;
+}
+
+.tab-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popular-destinations {
+    margin: 0 auto;
+    padding: 300px;
+    max-width: 5200px;
+    margin-top: 160px;
+}
+
+.section-heading {
+    color: #ffffff;
+    cursor: auto;
+    text-decoration: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.destination {
+    position: relative;
+    width: 184px;
+    height: 235px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.destination-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.overlay h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.overlay p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.additional-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.additional-content h1 {
+    font-size: 24px;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+.additional-content p,
+.additional-content ul {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.additional-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.additional-content ul li {
+    margin-bottom: 5px;
+}
+
+.dropdown-select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.passenger-input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.date-input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.flight-dropdown,
+.hotel-dropdown,
+.cab-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.flight-dropdown label,
+.hotel-dropdown label,
+.cab-dropdown label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.city-input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.city-list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+.city-list a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.city-list a:hover {
+    background-color: #f2f2f2;
+}
